@@ -3,7 +3,6 @@ from math import factorial
 num = int(input('Type a number: '))
 f = factorial (num)
 print('The factorial of {} is {}.'.format(num, f))'''
-
 num =  int(input('Type a number to find out his factorial: '))
 count = num
 factorial = 1
