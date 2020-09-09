@@ -1,0 +1,15 @@
+table = ('Internacional', 'Sao Paulo', 'Atletico-MG', 'Vasco', 'Flamengo', 'Palmeiras',
+ 'Santos', 'Fluminense', 'Sport', 'Ceara', 'Corinthias', 'Bahia', 'Fortaleza', 'Gremio', 
+ 'Botafogo', 'Athletico-PR', 'Coritiba', 'Atletico-GO', 'Bragantino', 'Goias')
+print('==*=='*20)
+print('Classification of Brazilian Championship')
+print('==*=='*20) 
+print(f'The actual classification of teams is as follow: {table}')
+print('==*=='*20)
+print(f' The first 5 in the list are: {table[:5]}')
+print('==*=='*20)
+print(f'The last four in the classsification are: {table [-4:]}')
+print('==*=='*20)
+print(f'The alphabetic order of the teams are: {sorted(table)}')
+print('==*=='*20)
+print(f'The {table[2]} is in 3ª position!')
