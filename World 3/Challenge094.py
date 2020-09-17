@@ -18,7 +18,7 @@ print('-='*35)
 print(group) 
 print('-='*35) 
 print(f'A) In total was registered {count} people.')
-print(f'B) The average age of the group is {average}.') 
+print(f'B) The average age of the group is {average:5.2f}.') 
 print(f'C) The woman registered are: ')
 for p in group:
     if p['gender'] in'fF':
@@ -26,6 +26,6 @@ for p in group:
         print(p['name'])
 print(f'D) People with age above average: ')
 for p in group:
-    if p['age'] > average:
+    if p['age'] >= average:
         for k, v in p.items():
             print(f' {k} = {v};',end='')
