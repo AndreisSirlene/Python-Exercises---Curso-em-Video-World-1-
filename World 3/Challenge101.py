@@ -1,14 +1,15 @@
-def count(i, e, w):  
-	"""
-	-> Do a count and show in the screen.
-	:parameter i: initial of the count
-	:parameter e: end of the count
-	:parameterw: walk of the count
-	"""
-	count = i
-	while count <= e:    
-		print(f'{count}',end='..')
-		count += w     # increment
-	print('End!')
+def vote(dob):
+	from datetime import date
+	actual = date.today().year
+	age = actual - dob
+	if 18 < age < 65:
+		return f'With {age} years: Right to Vote!'
+	elif age < 16:
+		return f'With {age} years: Can not vote! '
+	else:
+		return f'With {age} years: Vote is optional'
 
-count(2, 20, 4)
+#Main Program
+birth = int(input('What is your year of birth? '))
+print(vote(birth))
+
