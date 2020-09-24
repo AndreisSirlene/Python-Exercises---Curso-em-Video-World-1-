@@ -1,30 +1,34 @@
 def leiaInt(txt):
-    n = input(txt)
-    while not n.isnumeric():
-        print('Type a interger number: ')
-        n = (txt)
-    option = int(n)
-    return option
-        
+    while True:
+        try:
+            n = int(input(txt))
+        except (ValueError, TypeError):
+            print('\033[31mERROR: Please, type one interger valid number.\033[m')
+            continue
+        except KeyboardInterrupt:
+            print('The user prefer not inform the data.')
+            return 0
+        else:
+            return n
+
 
 def leiaFloat(msg):
-    nf = input(msg)
-    while not nf.isalpha():
-        print('Type a real number: ')
-        nf = (msg)
-    option = int(nf)
-    return option
+    while True:
+        try:
+            nf = float(input(msg)).real
+        except (ValueError, TypeError):
+            print('Please type a Real number.')
+            continue
+        except KeyboardInterrupt:
+            print('The user prefer not inform the data.')
+            return 0
+        else:
+            return nf
 
 
 #main program
-while True:
-    try:
-        n = leiaInt('Type a interger number: ')
-        nf = leiaFloat('Type a Real number: ')
-        break
-    except ValueError:
-        print('ERROR: Please, type one interger valid number.')
-    except KeyboardInterrupt:
-        print('The user prefer not inform the data.')
-    else:
-        print('The interger value is {n} and the real was {nf} ')
+n = leiaInt('Type a INTERGER number: ')
+print(f'The number typed was {n}')
+nf = leiaFloat('Type a REAL number: ')
+print(f'The Real number typed was {nf}')
+     
